@@ -1,0 +1,21 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let category of categoryList">
+            <div class="image-container" [ngClass]="{'selected': isCategorySelected(category.id)}">
+                <img [src]="getCategoryImagePath(category.id)" [alt]="'Category ' + category.name" class="image" (click)="selectedCategory(category.id); getImageClicked(category.subcategory)"/>
+                <span class="image-text">{{ category.name }}</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row" *ngIf="subcategoryList.length > 0">
+        <div class="col-md-3">
+            <div >
+            <select class="form-control" (change)="selectedSubCategory($event)">
+                <option>--select</option>
+                <option *ngFor="let subcategory of subcategoryList" value="{{subcategory.id}}" >{{subcategory.name}}</option>
+            </select>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+
+.transformation:hover {
+    transform: scale(1.05); /* Increase the size of the image container on hover */
+}
+
+.size{
+    margin: 2px;
+    width: 300px;
+    height: 300px;
+    font-weight: bold;
+    border-radius: 8px;
+    
+}
+
+.transformation{
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    
+}
+

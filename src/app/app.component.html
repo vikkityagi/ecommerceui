@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mt-3">
+    <!-- Navbar content -->
+    <a class="navbar-brand" href="#"><img src="/assets/images/shopping-logo.png" width="70" height="60" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse order-lg-last" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="login">Login</a>
+            </li>
+            <li class="nav-item dashboard" *ngIf="showDashboard">
+                <a class="nav-link" (click)="onClickDashboard()">Dashboard</a>
+            </li>
+        </ul>
+        
+    </div>
+</nav>
+<router-outlet></router-outlet>
+

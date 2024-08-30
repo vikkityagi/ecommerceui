@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card" *ngIf="!forgotPassword">
+        <div class="card-header">
+          <span class="text">Login Here...</span>
+          
+          <div class="form-group">
+            <input type="radio" name="opt" value="1" (change)="loginUserOrAdmin($event)">User
+            <input type="radio" name="opt" value="2" (change)="loginUserOrAdmin($event)">Admin
+          </div>
+        </div>
+
+        <div class="card-body">
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" formControlName="email" placeholder="Enter Email here...">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" formControlName="password" id="password"
+                placeholder="Enter password here...">
+            </div>
+            <div>
+              <a class="a" (click)="changePassword()">Forgot Password</a>
+            </div>
+            <div class="button mt-3">
+              <button type="submit" class="btn btn-primary">Login</button>&nbsp;&nbsp;
+              <button type="submit" class="btn btn-primary">Clear</button>
+            </div>
+            <p>If you don't have account, <a [routerLink]="['/signup']"><b>SignUp</b></a> please...</p>
+
+          </form>
+        </div>
+      </div>
+      <div class="card" *ngIf="forgotPassword">
+        <div class="card-header"><span class="text">Reset Password...</span></div>
+        <div class="card-body">
+          <form [formGroup]="loginForm">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" formControlName="email" placeholder="Enter Email here...">
+            </div>
+            <div class="button mt-3">
+              <button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;
+            </div>
+            <p>If you have an already account, <a class="a" (click)="forgotPassword = false"><b>Login</b></a> please...
+            </p>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-2 custom-row">
+        <div class="col-md-3" *ngFor="let product of productList">
+            <div class="image-container">
+                <img [src]="product.product_image_base64" alt="product.product_name" width="300px" height="300px" />
+                <!-- <br> -->
+                <div class="button">
+                    <button type="button" class="btn btn-danger">Buy Now</button>
+                    <button type="button" class="btn btn-danger" (click)="getDetail(product)">Check Detail</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

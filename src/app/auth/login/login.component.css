@@ -1,0 +1,27 @@
+.card-header{
+    justify-content: center;
+}
+.text{
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(81, 81, 230);
+}
+label{
+    font-weight: bold;
+}
+input{
+    padding: 15px;
+    font-weight: bold;
+}
+button{
+    justify-content: center;
+}
+.a{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.a:hover{
+    text-decoration: none;
+}
+
